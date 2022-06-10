@@ -38,7 +38,36 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/i18n'
   ],
+
+  i18n: {
+    lazy: true,
+    locales: [
+      {
+        name: 'Farsi',
+        code: 'fa',
+        iso: 'fa-IR',
+        file: 'fa-IR.js'
+      }
+    ],
+    langDir: 'locales/',
+      defaultLocale: 'fa',
+      vueI18n: {
+    fallbackLocale: 'en',
+        messages: {
+      en: {
+        welcome: 'Welcome'
+      },
+      fr: {
+        welcome: 'Bienvenue'
+      },
+      es: {
+        welcome: 'Bienvenido'
+      }
+    }
+  }
+},
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
